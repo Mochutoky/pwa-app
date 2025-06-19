@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бонусы</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Бонусы</h2>
+
+    <input type="text" placeholder="Поиск" class="search-bar" />
+
+    <div class="bonus-grid">
+        <div class="bonus-card" onclick="openBonus('Coke')">Coca-Cola</div>
+        <div class="bonus-card" onclick="openBonus('Efes')">Efes</div>
+        <div class="bonus-card" onclick="openBonus('Pepsi')">Pepsi</div>
+        <div class="bonus-card" onclick="openBonus('Onay')">Onay</div>
+        <div class="bonus-card" onclick="openBonus('R2D2')">R2D2</div>
+        <div class="bonus-card" onclick="openBonus('Koptic')">Koptic</div>
+    </div>
+    
+
+    <!-- Bottom nav -->
+    <div class="bottom-nav">
+    <a href="scanner.html" class="nav-item">
+        <img src="icons/qr-icon.svg" alt="QR" />
+        <span>QR</span>
+    </a>
+    <a href="bonus.html" class="nav-item">
+        <img src="icons/bonus-icon.svg" alt="Бонусы" />
+        <span>Бонусы</span>
+    </a>
+    <a href="profile.html" class="nav-item">
+        <img src="icons/user-icon.svg" alt="Профиль" />
+        <span>Профиль</span>
+    </a>
+    </div>
+
+    <!-- Firebase SDK (optional if pulling data) -->
+    <script src="js/bonus.js"></script>
+
+    <!-- Modal -->
+    <div id="bonusModal" class="modal">
+    <div class="modal-content">
+        <img id="bonusImage" src="" alt="Бонус" />
+        <h3 id="bonusTitle">Название бонуса</h3>
+        <p id="bonusDescription">Описание бонуса будет здесь...</p>
+        <button onclick="closeModal()">Закрыть</button>
+    </div>
+    </div>
+
+</body>
+</html>

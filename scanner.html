@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Сканер QR</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+  <h2>Сканируйте QR код</h2>
+
+  <div id="reader" style="width: 90%; max-width: 350px;"></div>
+
+  <p id="scan-status">Ожидание сканирования...</p>
+
+  <button onclick="sendQr()">Сканировать</button>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="js/qrscanner.js"></script>
+  
+  <div class="bottom-nav">
+  <a href="scanner.html" class="nav-item">
+    <img src="icons/qr-icon.svg" alt="QR" />
+    <span>QR</span>
+  </a>
+  
+  <a href="bonus.html" class="nav-item">
+    <img src="icons/bonus-icon.svg" alt="Бонусы" />
+    <span>Бонусы</span>
+  </a>
+  <a href="profile.html" class="nav-item">
+    <img src="icons/user-icon.svg" alt="Профиль" />
+    <span>Профиль</span>
+  </a>
+  </div>
+</body>
+</html>

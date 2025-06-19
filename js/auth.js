@@ -35,9 +35,10 @@ window.onload = function () {
         } else {
           const data = snapshot.docs[0].data();
           if (data.password === pass) {
-            alert("✅ Успешный вход");
             localStorage.setItem("number", number);
-            // window.location.href = "main.html";
+            localStorage.setItem("password", pass);
+            alert("✅ Успешный вход");
+            window.location.href = "profile.html";
           } else {
             alert("❌ Неверный пароль");
           }
@@ -84,7 +85,7 @@ window.onload = function () {
                     console.error(error);
                 });
             db.collection("Stats").add({ number, alum: 0, plastic: 0, glass: 0 });
-            db.collection("Stats").add({ number, onay: 0, r2d2: 0, koptic: 0 });
+            db.collection("Goods").add({ number, onay: 0, r2d2: 0, koptic: 0 });
 
             alert("✅ Успешная регистрация");
             window.location.href = "index.html";

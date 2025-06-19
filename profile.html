@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h2>Личный кабинет</h2>
+
+  <div id="profile-block" style="text-align: center;">
+    <p id="phone">Телефон: ...</p>
+    <p id="password">Пароль: ...</p>
+    <p id="balance">Бонусов: ...</p>
+    <p id="bottles">Бутылок: ...</p>
+  </div>
+
+  <button onclick="logout()">Выйти</button>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="js/profile.js"></script>
+
+  <div class="bottom-nav">
+  <a href="scanner.html" class="nav-item">
+    <img src="icons/qr-icon.svg" alt="QR" />
+    <span>QR</span>
+  </a>
+  
+  <a href="bonus.html" class="nav-item">
+    <img src="icons/bonus-icon.svg" alt="Бонусы" />
+    <span>Бонусы</span>
+  </a>
+  <a href="profile.html" class="nav-item">
+    <img src="icons/user-icon.svg" alt="Профиль" />
+    <span>Профиль</span>
+  </a>
+  </div>
+</body>
+</html>
