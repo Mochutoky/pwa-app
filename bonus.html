@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Бонусы</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json" />
 </head>
 <body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
     <h2>Бонусы</h2>
 
-    <input type="text" placeholder="Поиск" class="search-bar" />
+    <input type="text" placeholder="Поиск" class="search-bar" oninput="searchBonus(this.value)" />
 
-    <div class="bonus-grid">
+    <div class="bonus-grid" id="bonusGrid">
         <div class="bonus-card" onclick="openBonus('Coke')">Coca-Cola</div>
         <div class="bonus-card" onclick="openBonus('Efes')">Efes</div>
         <div class="bonus-card" onclick="openBonus('Pepsi')">Pepsi</div>
@@ -42,12 +46,13 @@
 
     <!-- Modal -->
     <div id="bonusModal" class="modal">
-    <div class="modal-content">
-        <img id="bonusImage" src="" alt="Бонус" />
-        <h3 id="bonusTitle">Название бонуса</h3>
-        <p id="bonusDescription">Описание бонуса будет здесь...</p>
-        <button onclick="closeModal()">Закрыть</button>
-    </div>
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">×</span>
+            <img id="bonusImage" src="" alt="Бонус" />
+            <h3 id="bonusTitle">Название бонуса</h3>
+            <p id="bonusDescription">Описание бонуса будет здесь...</p>
+            <button id="confirmBonus">Приобрести</button>
+        </div>
     </div>
 
 </body>

@@ -20,7 +20,6 @@ if (!number || !password) {
 }
 
 document.getElementById("phone").innerText = `Телефон: ${number}`;
-document.getElementById("password").innerText = `Пароль: ${password}`;
 
 // Получаем бонусы
 db.collection("Users")
@@ -29,7 +28,7 @@ db.collection("Users")
   .then((snapshot) => {
     if (!snapshot.empty) {
       const data = snapshot.docs[0].data();
-      document.getElementById("balance").innerText = `Бонусов: ${data.balance}`;
+      document.getElementById("balance").innerText = data.balance;
     }
   });
 
@@ -41,7 +40,7 @@ db.collection("Stats")
     if (!snapshot.empty) {
       const doc = snapshot.docs[0].data();
       const sum = (doc.plastic || 0) + (doc.glass || 0) + (doc.alum || 0);
-      document.getElementById("bottles").innerText = `Бутылок: ${sum}`;
+      document.getElementById("bottles").innerText = sum;
     }
   });
 

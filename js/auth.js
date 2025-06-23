@@ -73,22 +73,35 @@ window.onload = function () {
           alert("❌ Такой номер уже зарегистрирован");
         } else {
             db.collection("Users").add({
-                    number: number,
-                    password: pass1,
-                    balance: 0
-                })
-                .then((docRef) => {
-                    alert("✅ User added with ID: " + docRef.id);
-                })
-                .catch((error) => {
-                    alert("❌ Failed to add user: " + error.message);
-                    console.error(error);
-                });
-            db.collection("Stats").add({ number, alum: 0, plastic: 0, glass: 0 });
-            db.collection("Goods").add({ number, onay: 0, r2d2: 0, koptic: 0 });
-
+            number: number,
+            password: pass1,
+            balance: 0
+          }).then(() => {
+            return db.collection("Stats").add({
+              number,
+              alum: 0,
+              plastic: 0,
+              glass: 0
+            });
+          }).then(() => {
+            return db.collection("Goods").add({
+              number,
+              onay: 0,
+              r2d2: 0,
+              koptic: 0,
+              efes: 0,
+              coke: 0,
+              pepsi: 0
+            });
+          }).then(() => {
+            localStorage.setItem("number", number);
+            localStorage.setItem("password", pass1);
             alert("✅ Успешная регистрация");
             window.location.href = "index.html";
+          }).catch((error) => {
+            alert("❌ Ошибка при регистрации: " + error.message);
+            console.error(error);
+          });
         }
       })
       .catch((error) => {

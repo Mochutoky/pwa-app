@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Вход</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json" />
+  <script>
+  const number = localStorage.getItem("number");
+  const password = localStorage.getItem("password");
+
+  if (number && password) {
+    // Пользователь уже авторизован → направляем на сканер
+    window.location.href = "scanner.html";
+  }
+</script>
 </head>
 <body>
   <h2>Вход</h2>
@@ -20,6 +30,16 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
   <script src="js/auth.js"></script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("service-worker.js")
+        .then(() => console.log("✅ Service Worker registered"))
+        .catch((err) => console.error("Service Worker failed", err));
+    });
+  }
+  </script>
 </body>
 </html>
 

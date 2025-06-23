@@ -5,16 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Профиль</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json" />
 </head>
 <body>
-  <h2>Личный кабинет</h2>
+    <h2 class="section-title">Личный кабинет</h2>
 
-  <div id="profile-block" style="text-align: center;">
-    <p id="phone">Телефон: ...</p>
-    <p id="password">Пароль: ...</p>
-    <p id="balance">Бонусов: ...</p>
-    <p id="bottles">Бутылок: ...</p>
-  </div>
+    <div class="profile-header">
+        <img src="icons/avatar.svg" class="avatar" alt="Аватар" />
+        <div class="profile-text">
+            <p id="phone">Телефон: ...</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Количество</h2>
+
+    <div class="profile-stats">
+        <div class="stat-box">
+            <span>Бутылок:</span>
+            <p id="bottles">0</p>
+        </div>
+    <div class="stat-divider"></div>
+        <div class="stat-box">
+            <span>Бонусов:</span>
+            <p id="balance">0</p>
+        </div>
+    </div>
 
   <button onclick="logout()">Выйти</button>
 
