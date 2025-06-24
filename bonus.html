@@ -8,9 +8,6 @@
   <link rel="manifest" href="manifest.json" />
 </head>
 <body>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-
     <h2>Бонусы</h2>
 
     <input type="text" placeholder="Поиск" class="search-bar" oninput="searchBonus(this.value)" />
@@ -27,21 +24,27 @@
 
     <!-- Bottom nav -->
     <div class="bottom-nav">
-    <a href="scanner.html" class="nav-item">
-        <img src="icons/qr-icon.svg" alt="QR" />
-        <span>QR</span>
-    </a>
-    <a href="bonus.html" class="nav-item">
-        <img src="icons/bonus-icon.svg" alt="Бонусы" />
-        <span>Бонусы</span>
-    </a>
-    <a href="profile.html" class="nav-item">
-        <img src="icons/user-icon.svg" alt="Профиль" />
-        <span>Профиль</span>
-    </a>
+        <a href="map.html" class="nav-item">
+          <img src="icons/map-icon.svg" alt="Карта" />
+          <span>Карта</span>
+        </a>
+        <a href="scanner.html" class="nav-item">
+            <img src="icons/qr-icon.svg" alt="QR" />
+            <span>QR</span>
+        </a>
+        <a href="bonus.html" class="nav-item">
+            <img src="icons/bonus-icon.svg" alt="Бонусы" />
+            <span>Бонусы</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <img src="icons/user-icon.svg" alt="Профиль" />
+            <span>Профиль</span>
+        </a>
     </div>
 
     <!-- Firebase SDK (optional if pulling data) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="js/bonus.js"></script>
 
     <!-- Modal -->

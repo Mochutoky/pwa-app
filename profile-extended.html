@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя компания</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+    <h2 class="section-title">Моя компания</h2>
+
+    <div class="company-wrapper">
+    <div class="carbon-box">
+        <h3>Углеродный след:</h3>
+        <p id="carbonFootprint">0 кг</p>
+    </div>
+
+    <div class="carbon-box">
+        <h3>Предотвращено:</h3>
+        <p id="carbonSaved">0 кг</p>
+    </div>
+
+    <div class="bottle-box">
+        <h3>Количество переработанных отходов:</h3>
+        <ul>
+        <li>Алюминиевых банок: <span id="alum">0</span></li>
+        <li>Пластиковых бутылок: <span id="plastic">0</span></li>
+        <li>Стеклянных бутылок: <span id="glass">0</span></li>
+        </ul>
+    </div>
+    </div>
+
+    <button onclick="closeProfile()" style="margin-bottom: 2%;">Закрыть</button>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/profile-extended.js"></script>
+</body>
+</html>

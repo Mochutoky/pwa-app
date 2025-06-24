@@ -326,3 +326,56 @@ a {
   background-color: #4CAF50;
   height: 100%; 
 }
+
+.company-wrapper {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carbon-box {
+  border: 2px solid #000000;
+  border-radius: 12px;
+  padding: 20px;
+  background: #388E3C;
+  text-align: center;
+}
+
+.carbon-box h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.carbon-box p {
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.bottle-box {
+  border: 2px solid #000000;
+  border-radius: 12px;
+  padding: 20px;
+  background: #388E3C;
+}
+
+.bottle-box h3 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.bottle-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bottle-box li {
+  font-size: 16px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
