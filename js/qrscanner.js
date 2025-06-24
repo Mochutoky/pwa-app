@@ -49,3 +49,7 @@ function sendQr() {
       alert("❌ Ошибка при отправке: " + e.message);
     });
 }
+
+window.addEventListener("load", () => {
+  updateContent(); // your function to fetch latest data silently
+});

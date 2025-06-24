@@ -45,3 +45,7 @@ db.collection("Stats")
 function closeProfile() {
   window.location.href = "profile.html";
 }
+
+window.addEventListener("load", () => {
+  updateContent(); // your function to fetch latest data silently
+});
