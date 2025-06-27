@@ -17,3 +17,8 @@ const markerMR = L.marker([43.20265501619259, 76.89278536846858]).addTo(map);
 markerMR.bindPopup('Janaru MEGA Alma-Ata').openPopup();
 const markerEM = L.marker([43.21892365912182, 76.92933776030749]).addTo(map);
 markerEM.bindPopup('Janaru Esentai Mall').openPopup();
+
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, document.body.scrollHeight);
+});

@@ -47,5 +47,5 @@ function closeProfile() {
 }
 
 window.addEventListener("load", () => {
-  updateContent(); // your function to fetch latest data silently
+  window.scrollTo(0, document.body.scrollHeight);
 });

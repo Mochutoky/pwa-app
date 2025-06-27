@@ -42,14 +42,14 @@ function sendQr() {
       qr: scannedCode
     })
     .then(() => {
-      alert("✅ Успешно отправлено в базу");
+      console.log("✅ Успешно отправлено в базу");
       // window.location.href = "main.html";
     })
     .catch((e) => {
-      alert("❌ Ошибка при отправке: " + e.message);
+      console.log("❌ Ошибка при отправке: " + e.message);
     });
 }
 
 window.addEventListener("load", () => {
-  updateContent(); // your function to fetch latest data silently
+  window.scrollTo(0, document.body.scrollHeight);
 });
